@@ -1,2 +1,2 @@
-Team : Lense Nation 
+Team : Lense Nation.
 Project : Clover
