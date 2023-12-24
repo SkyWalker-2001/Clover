@@ -6,10 +6,11 @@ UFO Game: Surviving Asteroid Belt is an exhilarating 2D mobile game developed in
 
 - [Overview](#overview)
 - [Features](#features)
+- [Installation](#installation)
 - [Unity Setup](#unity-setup)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#LenseNationMedia) 
+- [License](#license)
 
 ## Overview
 
@@ -22,6 +23,13 @@ In UFO Game: Surviving Asteroid Belt, players pilot a 2D UFO through a dangerous
 - **Power-ups:** Collect 2D power-ups with a simple tap to enhance your UFO's capabilities and increase your score.
 - **High Scores:** Compete with friends or other players worldwide for the highest scores on the mobile 2D leaderboard.
 
+## Installation
+
+To embark on your intergalactic 2D adventure, follow these installation steps:
+
+1. Visit the [App Store/Google Play Store] on your mobile device.
+2. Search for "UFO Game: Surviving Asteroid Belt."
+3. Tap "Download" to install the 2D game on your device.
 
 Make sure your device meets the [2D game system requirements], and you have a stable internet connection to download the game.
 
@@ -46,4 +54,14 @@ We welcome contributions to make UFO Game: Surviving Asteroid Belt even more thr
 
 1. Fork the 2D project.
 2. Create a new branch (`git checkout -b feature/my-feature`).
-3. Make changes and commit them (`git commit -am 'A
+3. Make changes and commit them (`git commit -am 'Add new 2D feature'`).
+4. Push to the branch (`git push origin feature/my-feature`).
+5. Open a pull request.
+
+[Specify any 2D guidelines, coding standards, or information contributors need to know.]
+
+## License
+
+This 2D project is licensed under the Lense Nation Media License - see the [LICENSE.md](LICENSE.md) file for details.
+
+[Include any additional 2D information or a link to the full license text.]
