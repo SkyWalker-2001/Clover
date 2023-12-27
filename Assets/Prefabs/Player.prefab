@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 6179392658357400654}
   - component: {fileID: 2902101362528488423}
   - component: {fileID: 6232446550849416462}
+  - component: {fileID: 2846944662626888798}
+  - component: {fileID: 2735768291106582118}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -4960,3 +4962,31 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.4
+--- !u!114 &2846944662626888798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5116728806884876914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f569018cc8d924948b13d17d62e49056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  damageRecoveryTime: 1
+--- !u!114 &2735768291106582118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5116728806884876914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55db98ce11b9841f589b8c550730c71c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whiteFlashMat: {fileID: 2100000, guid: 891eaa0b00c375d4f8df2e6c04b3b981, type: 2}
+  restoreDefaultMatTime: 0.2
