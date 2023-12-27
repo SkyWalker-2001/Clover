@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Controller: MonoBehaviour
+public class Player_Controller: Singleton<Player_Controller>
 {
     [SerializeField] private float moveSpeed = 1f;
 
@@ -13,8 +13,10 @@ public class Player_Controller: MonoBehaviour
     public FloatingJoystick floatingJoystick;
 
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         rb = GetComponent<Rigidbody2D>();
     }
 
