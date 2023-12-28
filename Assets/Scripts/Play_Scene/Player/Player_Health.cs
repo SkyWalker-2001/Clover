@@ -41,11 +41,18 @@ public class Player_Health : Singleton<Player_Health>
 
         if (enemy)
         {
-            TakeDamage(1,collision.transform);
+            TakeDamage(1, collision.transform);
         }
 
-       // Destroy(collision.gameObject);
+        Destroy(collision.gameObject);
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        
+    }
+
+
 
     public void HealPlayer()
     {
