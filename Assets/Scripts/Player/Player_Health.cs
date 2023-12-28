@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Player_Health : Singleton<Player_Health>
@@ -10,10 +11,13 @@ public class Player_Health : Singleton<Player_Health>
     [SerializeField] private int maxHealth = 3;
     [SerializeField] private float damageRecoveryTime = 1f;
 
-
+    private Slider healthSlider;
     private int currentHealth;
     private bool canTakeDamage = true;
     private Flash flash;
+
+
+    const string HEALTH_SLIDER_TEXT = "Health_Slider";
 
 
     protected override void Awake()
@@ -33,7 +37,14 @@ public class Player_Health : Singleton<Player_Health>
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        
+        EnemyAI enemy = collision.gameObject.GetComponent<EnemyAI>();
+
+        if (enemy)
+        {
+            TakeDamage(1,collision.transform);
+        }
+
+       // Destroy(collision.gameObject);
     }
 
     public void HealPlayer()
@@ -53,6 +64,7 @@ public class Player_Health : Singleton<Player_Health>
         currentHealth -= damageAmount;
         StartCoroutine(DamageRecoveryRoutine());
         CheckIfPlayerDead();
+        UpdateHealthSlider();
     }
 
     private void CheckIfPlayerDead()
@@ -67,7 +79,7 @@ public class Player_Health : Singleton<Player_Health>
 
     private IEnumerator DeathLoadSceneRoutine()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(.1f);
         Destroy(gameObject);
         //Stamina.Instance.ReplenishStaminaOnDeath();
         SceneManager.LoadScene("GameOver_Scene");
@@ -77,5 +89,17 @@ public class Player_Health : Singleton<Player_Health>
     {
         yield return new WaitForSeconds(damageRecoveryTime);
         canTakeDamage = true;
+    }
+
+    private void UpdateHealthSlider()
+    {
+        // null checker
+        if (healthSlider == null)
+        {
+            healthSlider = GameObject.Find(HEALTH_SLIDER_TEXT).GetComponent<Slider>();
+        }
+
+        healthSlider.maxValue = maxHealth;
+        healthSlider.value = currentHealth;
     }
 }
