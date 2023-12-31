@@ -34,7 +34,7 @@ public class Spawner : MonoBehaviour
             position.y = Random.Range(spawnArea.bounds.min.y, spawnArea.bounds.max.y);
             position.z = Random.Range(spawnArea.bounds.min.z, spawnArea.bounds.max.z);
 
-            Instantiate(Enemy_Prefab, position, Quaternion.identity);
+            GameObject asteroid = Instantiate(Enemy_Prefab, position, Quaternion.identity);
 
             yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpaawnTime));
         }

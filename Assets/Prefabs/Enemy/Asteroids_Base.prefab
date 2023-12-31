@@ -180,8 +180,8 @@ MonoBehaviour:
   - {fileID: -71350537, guid: a3fee55fc87204d719eb7c74706983e5, type: 3}
   - {fileID: -1752494137, guid: a3fee55fc87204d719eb7c74706983e5, type: 3}
   size: 1
-  minSize: 0.5
-  maxSize: 1.5
+  minSize: 1
+  maxSize: 2
   directionX: 0
   directionY: 0
 --- !u!114 &8486901789568753132

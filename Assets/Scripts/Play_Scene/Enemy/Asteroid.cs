@@ -8,9 +8,9 @@ public class Asteroid : MonoBehaviour
 
     public float size = 1.0f;
 
-    public float minSize = 0.5f;
+    public float minSize = 1f;
 
-    public float maxSize = 1.5f;
+    public float maxSize = 3f;
 
     public float directionX;
 
@@ -30,6 +30,8 @@ public class Asteroid : MonoBehaviour
     private void Start()
     {
         ChangeSpriteOnStart();
+
+        size = Random.Range(minSize, maxSize);
 
         this.transform.localScale = Vector3.one * this.size;
         asteroid_RigidBody2D.mass = this.size;
