@@ -14,7 +14,11 @@ TagManager:
   - Cinamachine Confiner
   - Enemy
   - Wall
+<<<<<<< HEAD
   - Player_Wall
+=======
+  - Pick_Up
+>>>>>>> Development
   - 
   - 
   - 

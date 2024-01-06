@@ -26,6 +26,11 @@ public class Player_Controller: Singleton<Player_Controller>
 
     }
 
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
     private void Update()
     {
         PlayerInput();
@@ -33,12 +38,23 @@ public class Player_Controller: Singleton<Player_Controller>
 
     private void FixedUpdate()
     {
+        StartCoroutine(Player_Speed());
+
         Move();
     }
 
     private void PlayerInput()
     {
         movement = new Vector2(floatingJoystick.Horizontal, floatingJoystick.Vertical);
+    }
+
+    // Player Speed Courtine
+
+    private IEnumerator Player_Speed()
+    {
+        moveSpeed += (.1f * Time.fixedDeltaTime);
+
+        yield return new WaitForSeconds(2f);
     }
 
     private void Move()
