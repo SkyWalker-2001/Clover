@@ -6,7 +6,7 @@ public class Spawner : MonoBehaviour
 {
     private Collider2D spawnArea;
 
-    public GameObject Enemy_Prefab;
+    public GameObject[] Enemy_Prefab;
 
     public float minSpawnTime = 0.25f;
     public float maxSpaawnTime = 1.0f;
@@ -19,6 +19,11 @@ public class Spawner : MonoBehaviour
     private void OnEnable()
     {
         StartCoroutine(Spawn());
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
     }
 
     private IEnumerator Spawn()
@@ -34,7 +39,7 @@ public class Spawner : MonoBehaviour
             position.y = Random.Range(spawnArea.bounds.min.y, spawnArea.bounds.max.y);
             position.z = Random.Range(spawnArea.bounds.min.z, spawnArea.bounds.max.z);
 
-            GameObject asteroid = Instantiate(Enemy_Prefab, position, Quaternion.identity);
+            GameObject asteroid = Instantiate(Enemy_Prefab[Random.Range(0, Enemy_Prefab.Length)], position, Quaternion.identity);
 
             yield return new WaitForSeconds(Random.Range(minSpawnTime, maxSpaawnTime));
         }
