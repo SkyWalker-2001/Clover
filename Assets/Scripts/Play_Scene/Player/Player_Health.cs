@@ -46,6 +46,23 @@ public class Player_Health : Singleton<Player_Health>
             Destroy(collision.gameObject);
         }
 
+        Health_Power_Up health_Power_Up = collision.gameObject.GetComponent<Health_Power_Up>();
+
+        if (health_Power_Up)
+        {
+            Destroy(collision.gameObject);
+
+            Heal_Player();
+        }
+
+        Bomb_Pick_Up bomb_Pick_Up = collision.gameObject.GetComponent<Bomb_Pick_Up>();
+
+        if (bomb_Pick_Up)
+        {
+            Bomb_Pick_Up();
+
+            Destroy(collision.gameObject);
+        }
     }
 
 
@@ -67,6 +84,29 @@ public class Player_Health : Singleton<Player_Health>
         StartCoroutine(DamageRecoveryRoutine());
         CheckIfPlayerDead();
         UpdateHealthSlider();
+    }
+
+    private void Heal_Player()
+    {
+        if(currentHealth <= 3)
+        {
+            currentHealth += 1;
+
+            Debug.Log(currentHealth);
+        }
+    }
+
+    private void Bomb_Pick_Up()
+    {
+        Asteroid[] enemy = FindObjectsOfType<Asteroid>();
+
+        for (int i = 0; i < enemy.Length; i++)
+        {
+            Destroy(enemy[i].gameObject);
+        }
+
+        Debug.Log("Running");
+        Debug.Log(enemy.Length);
     }
 
     private void CheckIfPlayerDead()
