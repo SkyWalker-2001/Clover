@@ -74,6 +74,32 @@ public class Player_Health : Singleton<Player_Health>
         UpdateHealthSlider();
     }
 
+<<<<<<< Updated upstream
+=======
+    private void Heal_Player()
+    {
+        if(currentHealth < maxHealth)
+        {
+            currentHealth += 1;
+
+            Debug.Log(currentHealth);
+        }
+    }
+
+    private void Bomb_Pick_Up()
+    {
+        Asteroid[] enemy = FindObjectsOfType<Asteroid>();
+
+        for (int i = 0; i < enemy.Length; i++)
+        {
+            Destroy(enemy[i].gameObject);
+        }
+
+        Debug.Log("Running");
+        Debug.Log(enemy.Length);
+    }
+
+>>>>>>> Stashed changes
     private void CheckIfPlayerDead()
     {
         if(currentHealth <= 0 && !IsDead)
