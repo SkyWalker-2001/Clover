@@ -74,8 +74,7 @@ public class Player_Health : Singleton<Player_Health>
         UpdateHealthSlider();
     }
 
-<<<<<<< Updated upstream
-=======
+
     private void Heal_Player()
     {
         if(currentHealth < maxHealth)
@@ -99,7 +98,6 @@ public class Player_Health : Singleton<Player_Health>
         Debug.Log(enemy.Length);
     }
 
->>>>>>> Stashed changes
     private void CheckIfPlayerDead()
     {
         if(currentHealth <= 0 && !IsDead)
