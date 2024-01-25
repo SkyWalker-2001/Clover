@@ -408,6 +408,11 @@ MonoBehaviour:
       m_RotationOrder: 4
   m_CustomBlends: {fileID: 0}
   m_ParentHash: []
+--- !u!1 &153706958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5116728806884876914, guid: 97502308b64fb48949f2aef518edd080, type: 3}
+  m_PrefabInstance: {fileID: 2704970618843453473}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &251124599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,7 +1112,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -2.46, y: -0.34, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1153,6 +1158,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 176222121303749195, guid: 97502308b64fb48949f2aef518edd080, type: 3}
   m_PrefabInstance: {fileID: 2704970618843453473}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &592939467
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153706958}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fa3c73ecee9fc44b4a03c5372a49c730, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2959,12 +2985,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 176222121303749195, guid: 97502308b64fb48949f2aef518edd080, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 176222121303749195, guid: 97502308b64fb48949f2aef518edd080, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 176222121303749195, guid: 97502308b64fb48949f2aef518edd080, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 176222121303749195, guid: 97502308b64fb48949f2aef518edd080, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.46
       objectReference: {fileID: 0}
     - target: {fileID: 176222121303749195, guid: 97502308b64fb48949f2aef518edd080, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.34
       objectReference: {fileID: 0}
     - target: {fileID: 176222121303749195, guid: 97502308b64fb48949f2aef518edd080, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2999,9 +3037,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2902101362528488423, guid: 97502308b64fb48949f2aef518edd080, type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902101362528488423, guid: 97502308b64fb48949f2aef518edd080, type: 3}
       propertyPath: moveWithCustomTransform
       value: 
       objectReference: {fileID: 519420032}
+    - target: {fileID: 2937996364495850373, guid: 97502308b64fb48949f2aef518edd080, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -944691170, guid: e740e207a7e30462fae0c5d752805ed9, type: 3}
     - target: {fileID: 3741763178101561852, guid: 97502308b64fb48949f2aef518edd080, type: 3}
       propertyPath: floatingJoystick
       value: 
@@ -3013,7 +3059,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5116728806884876914, guid: 97502308b64fb48949f2aef518edd080, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 592939467}
   m_SourcePrefab: {fileID: 100100000, guid: 97502308b64fb48949f2aef518edd080, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
